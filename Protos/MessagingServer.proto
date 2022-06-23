@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option csharp_namespace = "MessagingServer";
+
+package MessagingServer;
+
+// The greeting service definition.
+service MessagingServer {
+  // Sends a greeting 
+  rpc Recieve(ConnectionRequest) returns (stream MessageEvent);
+  rpc Ack(AckInfo) returns (Noop);
+}
+
+
+message ConnectionRequest {
+  string clientId = 1;
+  int32 max = 2;
+}
+
+
+
+message MessageEvent{
+  string messageData = 1;
+  string messageId = 2;
+  int32 messageIndex = 3;
+  string header = 4; 
+
+}
+
+message Noop{
+}
+
+message AckInfo{
+  string messageId = 1;
+  string status = 2;
+  int32 messageIndex = 3;
+  string clientId = 4;
+}

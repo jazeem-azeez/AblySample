@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "MessagingClient": {
+      "commandName": "Project",
+      "commandLineArgs": "5500 60 1232"
+    },
+    "Docker (1)": {
+      "commandName": "Docker"
+    }
+  }
+}
