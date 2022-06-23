@@ -23,6 +23,7 @@ namespace MessagingServer.Services.Implementations
         }
         public Task Ack(string clientId, int messageIndex, string messageId)
         {
+            //NOT implementing extensively with transport semantics s it may be an overkill
             return Task.CompletedTask;
         }
 

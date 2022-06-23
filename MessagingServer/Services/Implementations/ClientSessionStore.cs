@@ -7,7 +7,6 @@ namespace MessagingServer.Services.Implementations
     public class ClientSessionStore : IClientSessionStore
     {
         Dictionary<string, ClientInfoDoM> cache = new Dictionary<string, ClientInfoDoM>();
-        
 
         public Task<ClientInfoDoM> GetOrSetClientInfo(string clientId, ClientInfoDoM data)
         {
